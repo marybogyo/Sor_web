@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 10pt;
+}
+:root{
+    --maincolor:beige;
+}
+body{
+    background-image: url(design/teglafal.jpg);
+    margin-top: 15px;
+
+}
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "a n"
+    "f f";
+    width: 80%;
+    max-height: 1000px;
+    margin: 0 auto; 
+    background-color: rgb(51, 51, 51);
+    box-shadow: -3px -3px 10px 5px #444444;
+}
+header{
+    grid-area: h;
+    background-image: url(design/beer-new_401732638.jpg);
+    height: 300px;
+    background-size: cover;
+}
+header h1{
+    font-weight: bold;
+    font-family: Garamond;
+    letter-spacing: 4px;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: var(--maincolor);
+}
+article{
+    grid-area: a;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    padding: 10px;
+    
+}
+article h2{
+    font-size: 15px;
+    color: var(--maincolor);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+article li{
+    font-size: 10px;
+    text-align: justify;
+    color: var(--maincolor);
+    
+    
+}
+article img{
+    float: left;
+    width: 200px;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+nav{
+    grid-area: n;
+    border-top: 1px solid white;
+ }
+
+nav ul{
+ margin-top: 20px;
+
+
+}
+nav li{
+    border: 1px solid white;
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 5px;
+    margin-right: 10px;
+    padding: 10px;
+}
+nav li:hover{
+    background-color: aquamarine;
+  
+}
+nav a:hover{
+    color: white;
+}
+nav a{
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer{
+    grid-area: f;
+    background-color: rgb(141, 138, 138);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+th{
+    color: var(--maincolor);
+    padding: 5px;
+    border: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+td{
+    color: var(--maincolor);
+    padding: 5px;
+    border: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.gray{
+    background-color: rgb(105, 104, 104);
+    
+}
+@media screen and (max-width: 700px){
+    main{
+        grid-template-columns:  1fr;
+        grid-template-areas: 
+        "h "
+        "a "
+        "n"
+        "f ";
+
+}
+}
